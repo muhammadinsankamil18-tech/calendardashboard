@@ -25,16 +25,16 @@
   body{
     font-family:"SF Pro Display","SF Pro Text","SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background:#e3e5e9; color:var(--ink); -webkit-font-smoothing:antialiased;
-    padding:20px 24px; min-height:100vh;
+    padding:0; min-height:100vh;
   }
   button{ font:inherit; color:inherit; }
   button:focus-visible, input:focus-visible, select:focus-visible{ outline:2px solid var(--blue); outline-offset:2px; }
   svg{ display:block; }
 
-  .frame{ max-width:1480px; margin:0 auto; background:#fff; }
+  .frame{ max-width:none; margin:0; min-height:100vh; background:#fff; }
 
   /* ================= NAV ================= */
-  .nav{ display:flex; align-items:center; height:68px; padding:0 32px; background:var(--nav); }
+  .nav{ display:flex; align-items:center; height:68px; padding:0 12px; background:var(--nav); }
   .logo{ width:250px; flex:none; font-size:25px; font-weight:600; color:#3b6fe0; letter-spacing:.01em; }
   .nav-items{ position:relative; display:flex; align-items:stretch; height:100%; margin:0 auto; }
   .nav-item{ display:flex; align-items:center; gap:9px; padding:0 16px; border:0; background:none; font-size:15px; color:#5d6472; cursor:pointer; transition:color .2s; }
@@ -75,10 +75,10 @@
   .pop-row .mini-tgl{ margin-left:auto; }
 
   /* ================= PAGE ================= */
-  .content{ padding:26px 32px 30px; }
+  .content{ padding:0; }
   .page{ transition:opacity .25s ease; }
   .page.fade{ opacity:0; }
-  .sched-head{ display:flex; align-items:flex-end; gap:16px; margin-bottom:18px; }
+  .sched-head{ display:flex; align-items:flex-end; gap:16px; margin:0; padding:14px 12px 10px; }
   .sched-head h1{ margin:0; font-size:23px; font-weight:500; letter-spacing:-.01em; }
   .sched-head p{ margin:5px 0 0; font-size:15px; color:var(--sub); }
   .head-tools{ margin-left:auto; display:flex; align-items:center; gap:8px; }
@@ -98,7 +98,7 @@
   .sync-btn .g-ic{ width:18px; height:18px; }
   .sync-btn.busy .g-ic{ animation:spin .8s linear infinite; }
 
-  .layout{ display:grid; grid-template-columns:minmax(0,1fr) 312px; gap:18px; align-items:stretch; }
+  .layout{ display:grid; grid-template-columns:minmax(0,1fr) 312px; gap:8px; padding:0 8px 8px; align-items:stretch; }
 
   /* ================= CALENDAR CARD ================= */
   .cal-card{ position:relative; contain:size; min-width:0; display:flex; flex-direction:column; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
@@ -225,7 +225,7 @@
   .mv-more{ font-size:11.5px; color:var(--sub); padding-left:4px; }
 
   /* ================= SIDEBAR ================= */
-  .side{ display:flex; flex-direction:column; gap:12px; min-width:0; }
+  .side{ display:flex; flex-direction:column; gap:8px; min-width:0; }
   .new-btn{ height:44px; flex:none; display:flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:11px; background:linear-gradient(180deg,#4f86f7,#3568ea); color:#fff; font-size:14.5px; font-weight:500; cursor:pointer; box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 4px 12px rgba(59,116,240,.25); transition:filter .15s, transform .1s; }
   .new-btn:hover{ filter:brightness(1.05); }
   .new-btn:active{ transform:scale(.985); }
